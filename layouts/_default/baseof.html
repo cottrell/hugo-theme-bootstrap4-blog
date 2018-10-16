@@ -2,6 +2,7 @@
 <html lang="{{ .Lang }}">
 
   <head>
+    {{ partial "head-custom-pre.html" . }}
     {{ partial "head-meta.html" . }}
 
     {{ block "schema-dot-org" . }}
