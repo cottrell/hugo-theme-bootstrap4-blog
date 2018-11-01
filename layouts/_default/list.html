@@ -31,7 +31,7 @@
 
 {{ $truncate := default true .Site.Params.truncate }}
 {{ $paginator := .Paginate (where .Site.RegularPages "Section" "in" .Site.Params.mainSections) }}
-{{ range $paginator.Pages }}
+{{ range sort $paginator.Pages "Lastmod" "desc" }}
 {{ if $truncate }}
 {{ .Render "summary" }}
 {{ else }}
