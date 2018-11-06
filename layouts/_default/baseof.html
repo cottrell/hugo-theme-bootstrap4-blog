@@ -43,6 +43,7 @@
           <a class="nav-link{{ if or ($currentPage.IsMenuCurrent "navbar" .) ($currentPage.HasMenuCurrent "navbar" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
           {{ end }}
         </nav>
+        {{ partial "search-custom.html" . }}
       </div>
     </div>
     {{ end }}
